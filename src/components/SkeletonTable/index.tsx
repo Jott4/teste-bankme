@@ -3,11 +3,11 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
+
   Tr,
   Th,
   Td,
-  TableCaption,
+
   Box,
 } from "@chakra-ui/react";
 

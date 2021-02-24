@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 import { useRouter } from "next/router";
-import api from "../service/http";
 
 const Index = () => {
   const router = useRouter();
