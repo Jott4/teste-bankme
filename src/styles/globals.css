@@ -1,0 +1,91 @@
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  tr + tr {
+    margin: 10px 0px;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #2d3748;
+  }
+  td:nth-of-type(1):before {
+    content: "Data de emissão";
+  }
+  td:nth-of-type(2):before {
+    content: "Nome do emitente";
+  }
+  td:nth-of-type(3):before {
+    content: "CNPJ do emitente";
+  }
+  td:nth-of-type(4):before {
+    content: "Nome do destinatário";
+  }
+  td:nth-of-type(5):before {
+    content: "CNPJ do emitente";
+  }
+  td:nth-of-type(6):before {
+    content: "Valor total (R$)";
+  }
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+
+  animation: 1s forwards infinite placeholderShimmer linear;
+  border-radius: 20px;
+  height: 10px;
+}
